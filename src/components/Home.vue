@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <header>
-        <video :src="movie" v-if="isMovie" autoplay="autoplay" controls="controls" v-on:click="ToggleShare()"></video>
+        <video :src="movie" v-if="isMovie" autoplay="autoplay" controls="controls"  v-on:pause="ToggleShare()"></video>
     </header>
     <main v-show="isMovie">
         <img src="../assets/cd.png" />
@@ -100,6 +100,7 @@
                     this.share2 = true;
                 }
             },
+
 
 
         }
